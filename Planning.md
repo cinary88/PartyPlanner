@@ -4,12 +4,12 @@ This is a proposed roadmap to implement Party Planner App.
 
 # Roadmap Steps
 
-| Preparation | Implementation | Completion | Support |
-| -------- | -------- | -------- | -------- | -------- |
-| Initiation and planning period | Execution, Monitoring and control | Approval of deliverables | Maintenance |
-| Requirement Analysis | Transfer design document into coding | Ensure that manual testing is complete | User Support and trraining |
-| Stakeholder analysis | Follow an iterative approach and release in small units | Integrate iterated parts of the project | Documentation updates and bug fixing continue |
-| Prototypes and design document preparation | Implement a testing & metrics framework, follow continuous delivery | Bug fixing and documentation is complete.| Version control |
+| Preparation                                  | Implementation                                        | Completion                               | Support                                   |
+| -------------------------------------------- | ----------------------------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| Initiation and planning period               | Execution, Monitoring and control                     | Approval of deliverables                 | Maintenance                               |
+| Requirement Analysis                         | Transfer design document into coding                 | Ensure that manual testing is complete   | User Support and Training                 |
+| Stakeholder analysis                         | Follow an iterative approach and release in small units | Integrate iterated parts of the project | Documentation updates and bug fixing continue |
+| Prototypes and design document preparation   | Implement a testing & metrics framework, follow continuous delivery | Bug fixing and documentation is complete | Version control                           |
 
 ![Road map in weeks](techroadmap.png "Tech Roadmap")
 
