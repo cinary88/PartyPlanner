@@ -11,7 +11,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 app.get('/generate-activities', async (req, res) => {
-  console.log('Received request to /generate-activities');
   const partyName = req.query.partyName || 'DefaultParty';
 
   try {
