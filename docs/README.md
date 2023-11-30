@@ -9,6 +9,6 @@
 
 Party Activities: This feature generates suggested activities for a given party name using openai.
 
-![Activities](architecture.png "Activities Page")
+![Activities](activities.png "Activities Page")
 
 
