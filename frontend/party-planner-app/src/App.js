@@ -1,41 +1,38 @@
-import React, { useState } from 'react';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import PartyActivityFinder from './PartyActivityFinder';
+import PartyGenerator from './PartyGenerator';
 
-function App() {
-  const [partyName, setPartyName] = useState('');
-  const [resultText, setResultText] = useState('');
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch(`http://localhost:3001/generate-activities?partyName=${partyName}`);
-      const data = await response.json();
-
-      setResultText(data.resultText);
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
-
+const App = () => {
   return (
-    <div className="App">
-      <h1>Party Planner</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Party Name:
-          <input type="text" value={partyName} onChange={(e) => setPartyName(e.target.value)} />
-        </label>
-        <button type="submit">Generate Activities</button>
-      </form>
-      {resultText && (
-        <div>
-          <h2>Generated Activities:</h2>
-          <p>{resultText}</p>
-        </div>
-      )}
-    </div>
+    <Router>
+      <div className="App">
+        <h1>Party App</h1>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/partyactivityfinder">Party Activity Finder</Link>
+            </li>
+            <li>
+              <Link to="/partygenerator">Party Generator</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/partyactivityfinder" element={<PartyActivityFinder />} />
+          <Route path="/partygenerator" element={<PartyGenerator />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
+
+const Home = () => {
+  return <h2>Welcome to the Home Page!</h2>;
+};
 
 export default App;
